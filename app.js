@@ -2,9 +2,17 @@ const express = require('express');
 const cors = require('cors'); 
 const { APP } = require('./config')
 const authRoutes = require('./routes/authRoutes')
+<<<<<<< HEAD
 const app = express();
 
 app.use(express.json());
+=======
+const studenRoutes = require('./routes/studentRoutes')
+const app = express();
+
+app.use(express.json());
+app.use(express.static('public')); 
+>>>>>>> hasanboy
 app.use(cors()); 
 app.use(express.urlencoded({ extended: true }));
 
@@ -14,6 +22,10 @@ app.get('/', (req, res) => {
 
 
 app.use('/auth', authRoutes);  // Mounting auth routes
+<<<<<<< HEAD
+=======
+app.use('/students', studenRoutes)
+>>>>>>> hasanboy
 
 app.listen(APP.PORT, () => console.log(`Server listen http://localhost:${APP.PORT}`));
 

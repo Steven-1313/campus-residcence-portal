@@ -13,4 +13,14 @@ const loginSchema = Joi.object({
 
 })
 
+<<<<<<< HEAD
 module.exports = { registerSchema, loginSchema};
+=======
+const roomRequestSchema = Joi.object({
+    roomId: Joi.number().integer().required()
+})
+
+
+
+module.exports = { registerSchema, loginSchema, roomRequestSchema};
+>>>>>>> hasanboy
